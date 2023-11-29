@@ -1,0 +1,17 @@
+regions:
+- ap-southeast-1
+
+account-blocklist:
+- "999999999999" # production
+
+accounts:
+  "055091791732": {
+  
+  }
+  
+resource-types:
+  targets:
+    - S3Object
+    - S3Bucket
+    
+#run command 'aws-nuke -c nuke-config.yml'
