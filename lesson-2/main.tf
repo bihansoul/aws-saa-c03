@@ -6,12 +6,18 @@ provider "aws" {
   region = "ap-southeast-2"
 }
 
-#module "iam" {
-#  source = "./modules/iam"
-#}
+module "iam" {
+  source = "./modules/iam"
+}
 
 module "vpc" {
   source = "./modules/vpc"
+}
+
+module "ec2" {
+  source = "./modules/ec2"
+  vpc_id = module.vpc.vpc_id
+  subnet_id = module.vpc.subnet_id
 }
 
 # run 'terraform apply' to apply script
