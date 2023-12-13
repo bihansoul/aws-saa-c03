@@ -32,7 +32,7 @@ resource "aws_route_table" "nguyendt15_route_table" {
   vpc_id = aws_vpc.nguyendt15_vpc.id
 
   route {
-    cidr_block = "10.1.0.0/16"
+    cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.nguyendt15_internet_gateway.id
   }
 
